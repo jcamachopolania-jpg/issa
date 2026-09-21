@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ISSA - Cosmetología, cuidado facial y tratamientos de piel a domicilio.">
+<title>ISSA | Estética & Cuidado de la Piel</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+:root{--ink:#29211e;--muted:#776861;--cream:#fbf5f0;--sand:#ead8cc;--rose:#c99f8d;--brown:#68483c;--white:#fffdfa;--line:#eaded7}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.top{background:var(--brown);color:#fff;text-align:center;padding:8px;font-size:13px;letter-spacing:.04em}
+header{position:sticky;top:0;z-index:50;background:rgba(255,253,250,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{max-width:1180px;margin:auto;height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 24px}
+.logo{font-family:'Playfair Display',serif;font-size:30px;letter-spacing:.18em}.logo span{display:block;font:9px 'DM Sans';letter-spacing:.42em;text-align:center;margin-top:-4px}
+.navlinks{display:flex;gap:26px;font-size:14px;color:var(--muted)}.navlinks a:hover{color:var(--brown)}
+.navbtn{background:var(--brown);color:white;padding:11px 18px;border-radius:30px;font-size:13px}
+.hero{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;max-width:1180px;margin:auto;padding:80px 24px;gap:60px}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;color:var(--rose);font-size:12px;font-weight:700}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500}
+h1{font-size:clamp(48px,7vw,82px);line-height:1.03;margin:18px 0}
+.hero p{font-size:17px;color:var(--muted);max-width:590px}
+.actions{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:30px;font-weight:600;font-size:14px;border:1px solid var(--brown);cursor:pointer}
+.primary{background:var(--brown);color:#fff}.secondary{background:transparent;color:var(--brown)}
+.hero-art{min-height:470px;border-radius:170px 170px 28px 28px;background:linear-gradient(145deg,#e5cec0,#f8eee8);position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.hero-art:before{content:"ISSA";font-family:'Playfair Display';font-size:120px;color:rgba(255,255,255,.35);position:absolute;top:70px;left:35px}
+.hero-card{position:absolute;right:22px;bottom:22px;background:rgba(255,253,250,.9);padding:18px 20px;border-radius:18px;box-shadow:0 15px 40px rgba(50,30,20,.12);font-size:13px}
+section{padding:90px 24px}.wrap{max-width:1180px;margin:auto}
+.section-head{text-align:center;max-width:700px;margin:0 auto 45px}.section-head h2{font-size:44px;margin:10px 0}.section-head p{color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:28px 23px;box-shadow:0 12px 35px rgba(70,45,35,.05);transition:.25s}
+.card:hover{transform:translateY(-5px)}.num{color:var(--rose);font-size:12px;font-weight:700;letter-spacing:.15em}.card h3{font-size:24px;margin:15px 0 10px}.card p{font-size:14px;color:var(--muted);min-height:92px}.card a{font-size:13px;color:var(--brown);font-weight:700}
+.features{background:var(--white)}.featuregrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.feature{text-align:center;padding:25px}.feature .ico{font-size:28px;margin-bottom:12px}.feature h3{font-size:22px}.feature p{font-size:14px;color:var(--muted);margin-top:8px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about h2{font-size:46px;margin:12px 0}.about p{color:var(--muted);margin:12px 0}.quote{background:var(--sand);padding:38px;border-radius:30px;font-family:'Playfair Display';font-size:25px}
+.booking{background:var(--brown);color:#fff}.booking .section-head p{color:#eadbd3}.booking .section-head h2{color:#fff}
+.formbox{max-width:760px;margin:auto;background:#fff;padding:28px;border-radius:26px;color:var(--ink);display:grid;gap:13px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+label{font-size:12px;color:var(--muted);font-weight:600}input,select,textarea{width:100%;margin-top:6px;border:1px solid var(--line);border-radius:12px;padding:13px;font:inherit;background:#fff}
+textarea{min-height:100px;resize:vertical}.formbox button{margin-top:5px;border:0}
+.contactgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.contact{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:25px;text-align:center}.contact strong{display:block;font-family:'Playfair Display';font-size:21px;color:var(--brown)}.contact span{font-size:14px;color:var(--muted)}
+footer{background:#241c19;color:#eee;padding:45px 24px;text-align:center}footer .logo{display:inline-block;margin-bottom:12px}footer p{color:#cbbdb5;font-size:13px}.social{display:inline-block;margin-top:12px;color:#f1d9cc}
+.toast{position:fixed;right:20px;bottom:20px;background:#2b211d;color:white;padding:15px 20px;border-radius:14px;display:none;z-index:100}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-art{min-height:380px}.services{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.featuregrid,.contactgrid{grid-template-columns:1fr}.navlinks{display:none}}
+@media(max-width:520px){.services{grid-template-columns:1fr}.row{grid-template-columns:1fr}section{padding:65px 18px}.hero{padding:55px 18px}.navbtn{display:none}}
+</style>
+</head>
+<body>
+<div class="top">🏠 SERVICIO A DOMICILIO · Atención personalizada</div>
+
+<header><nav>
+<a href="#inicio" class="logo">ISSA<span>BEAUTY & SKIN</span></a>
+<div class="navlinks"><a href="#servicios">Servicios</a><a href="#experiencia">Experiencia</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></div>
+<a class="navbtn" href="#cita">Agendar cita</a>
+</nav></header>
+
+<main>
+<section class="hero" id="inicio">
+<div>
+<div class="eyebrow">Estética · Cuidado de la piel · Bienestar</div>
+<h1>Realza tu esencia.</h1>
+<p>Un espacio de cuidado pensado para consentir tu piel con tratamientos faciales y atención personalizada, directamente en la comodidad de tu hogar.</p>
+<div class="actions"><a class="btn primary" href="#servicios">Descubrir servicios</a><a class="btn secondary" href="https://wa.me/573223291237?text=Hola%20ISSA%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank">Hablar por WhatsApp</a></div>
+</div>
+<div class="hero-art"><div class="hero-card">✨ Cuidado personalizado<br><strong>A domicilio</strong></div></div>
+</section>
+
+<section id="servicios">
+<div class="wrap"><div class="section-head"><div class="eyebrow">Nuestros servicios</div><h2>Cuidado que se adapta a ti</h2><p>Conoce nuestras opciones y elige el tratamiento que mejor se adapte a tus objetivos de cuidado facial.</p></div>
+<div class="services">
+<article class="card"><div class="num">01 · FACIAL</div><h3>Limpieza facial</h3><p>Una experiencia de limpieza y cuidado para ayudar a mantener una piel fresca, suave y luminosa.</p><a href="#cita" onclick="choose('Limpieza facial')">AGENDAR →</a></article>
+<article class="card"><div class="num">02 · INTENSIVA</div><h3>Limpieza facial profunda</h3><p>Un protocolo más completo de higiene y cuidado para una sensación de piel renovada.</p><a href="#cita" onclick="choose('Limpieza facial profunda')">AGENDAR →</a></article>
+<article class="card"><div class="num">03 · GLOW</div><h3>Dermaplaning</h3><p>Exfoliación superficial que ayuda a mejorar la textura y aporta una apariencia más luminosa.</p><a href="#cita" onclick="choose('Dermaplaning')">AGENDAR →</a></article>
+<article class="card"><div class="num">04 · CUIDADO</div><h3>Despigmentantes</h3><p>Tratamientos disponibles por unidad o en paquetes, definidos según las necesidades de tu piel.</p><a href="#cita" onclick="choose('Tratamiento despigmentante')">AGENDAR →</a></article>
+</div></div>
+</section>
+
+<section class="features" id="experiencia">
+<div class="wrap"><div class="section-head"><div class="eyebrow">La experiencia ISSA</div><h2>Más que un tratamiento</h2><p>Queremos que cada cita sea un momento para ti.</p></div>
+<div class="featuregrid">
+<div class="feature"><div class="ico">🏠</div><h3>A domicilio</h3><p>Recibe tu servicio en la comodidad de tu hogar.</p></div>
+<div class="feature"><div class="ico">✨</div><h3>Atención personalizada</h3><p>Cada piel tiene necesidades diferentes; conversamos contigo antes de tu servicio.</p></div>
+<div class="feature"><div class="ico">🤍</div><h3>Cuidado y detalle</h3><p>Una experiencia enfocada en bienestar, cuidado e higiene.</p></div>
+</div></div>
+</section>
+
+<section id="nosotros"><div class="wrap about">
+<div><div class="eyebrow">Conoce ISSA</div><h2>Tu piel, tu momento.</h2><p>ISSA nace como una propuesta de belleza y cuidado facial cercana, elegante y personalizada.</p><p>Nuestro objetivo es ofrecerte una experiencia cómoda, cuidada y pensada para que puedas dedicarte un momento sin salir de casa.</p><a class="btn primary" href="#cita">Quiero mi cita</a></div>
+<div class="quote">“Realza tu esencia y convierte el cuidado de tu piel en un momento para ti.”</div>
+</div></section>
+
+<section class="booking" id="cita">
+<div class="wrap"><div class="section-head"><div class="eyebrow">Reserva</div><h2>Agenda tu cita</h2><p>Completa el formulario y te enviaremos la solicitud directamente a WhatsApp.</p></div>
+<form class="formbox" onsubmit="send(event)">
+<div class="row"><div><label>NOMBRE</label><input id="name" required placeholder="Tu nombre"></div><div><label>TELÉFONO</label><input id="phone" placeholder="Tu teléfono"></div></div>
+<div class="row"><div><label>SERVICIO</label><select id="service" required><option value="">Selecciona</option><option>Limpieza facial</option><option>Limpieza facial profunda</option><option>Dermaplaning</option><option>Tratamiento despigmentante</option></select></div><div><label>FECHA DESEADA</label><input id="date" type="date" required></div></div>
+<div><label>MENSAJE</label><textarea id="msg" placeholder="Cuéntanos qué necesitas o si deseas un paquete..."></textarea></div>
+<button class="btn primary" type="submit">Enviar solicitud por WhatsApp</button>
+</form></div>
+</section>
+
+<section id="contacto"><div class="wrap"><div class="section-head"><div class="eyebrow">Contacto</div><h2>Estamos para atenderte</h2></div>
+<div class="contactgrid">
+<div class="contact"><strong>WhatsApp</strong><span>322 329 1237</span></div>
+<div class="contact"><strong>Instagram</strong><span>@issa</span></div>
+<div class="contact"><strong>Modalidad</strong><span>Servicio a domicilio</span></div>
+</div></div></section>
+</main>
+
+<footer><div class="logo">ISSA<span>BEAUTY & SKIN</span></div><p>Realza tu esencia · Cuidado facial y bienestar</p><a class="social" href="https://instagram.com/issa" target="_blank">Instagram · @issa</a></footer>
+<div class="toast" id="toast">Solicitud preparada en WhatsApp ✨</div>
+<script>
+function choose(v){document.getElementById('service').value=v}
+function send(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value,p=document.getElementById('phone').value,s=document.getElementById('service').value,d=document.getElementById('date').value,m=document.getElementById('msg').value;
+ const text=`Hola ISSA ✨%0A%0ASoy ${encodeURIComponent(n)}.%0ATeléfono: ${encodeURIComponent(p)}.%0AQuiero agendar: ${encodeURIComponent(s)}.%0AFecha deseada: ${encodeURIComponent(d)}.%0AMensaje: ${encodeURIComponent(m)}`;
+ document.getElementById('toast').style.display='block'; setTimeout(()=>document.getElementById('toast').style.display='none',2500);
+ window.open(`https://wa.me/573223291237?text=${text}`,'_blank');
+}
+</script>
+</body></html>
